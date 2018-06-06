@@ -1,6 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+fetch('https://api.ipify.org').then( resp => {
+    console.log("resp.text to", resp);
+return resp.text();
+}).then( ip => {
+console.log('Moje IP:', ip);
+});
+
+fetch('https://api.ipify.org').then( r => r.text() ).then( ip => {
+console.log('Moje IP:', ip);
+});
+
 class Button extends React.Component {
     constructor(props) {
         super(props);
