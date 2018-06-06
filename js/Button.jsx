@@ -1,16 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-fetch('https://api.ipify.org').then( resp => {
-    console.log("resp.text to", resp);
-return resp.text();
-}).then( ip => {
-console.log('Moje IP:', ip);
-});
+fetch('https://api.ipify.org')
+    .then( r => {
+        if(r.ok) {
+            return r.text();
+        } else {
+            throw new Error("connection error");
+        }
+     })
+    .then( ip => {
+        console.log('Moje IP:', ip);})
+    .catch(err => console.log(err));
 
-fetch('https://api.ipify.org').then( r => r.text() ).then( ip => {
-console.log('Moje IP:', ip);
-});
+    console.log("test");
 
 class Button extends React.Component {
     constructor(props) {
