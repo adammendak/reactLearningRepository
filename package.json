@@ -17,7 +17,8 @@
     "react": "^15.4.0",
     "react-dom": "^15.4.0",
     "webpack": "^4.10.2",
-    "webpack-cli": "^2.1.5"
+    "webpack-cli": "^2.1.5",
+    "whatwg-fetch": "^2.0.4"
   },
   "devDependencies": {
     "babel-preset-stage-2": "^6.24.1"
