@@ -7,5 +7,5 @@ function Extension() {
     );
   }
   
-  export default Extension;
-  
+// export default Extension;
+export function Extension();

@@ -1,12 +1,15 @@
 var path = require("path");
 module.exports = {
-    entry:["whatwg-fetch", "./js/Button.jsx"]
+    entry:["whatwg-fetch", "./js/childrenEvent.jsx"]
     ,
-    output: { filename: "out.js"
-    , path: path.resolve(__dirname,
-    "js") },
-mode: "development"
-    , watch: true,
+    output: { filename: "out.js", path: path.resolve(__dirname, "js") },
+    devServer: {
+        inline: true,
+        contentBase: './',
+        port: 3001
+        },
+    mode: "development", 
+    watch: true,
     module: {
     rules: [{
         test: /\.jsx$/,
