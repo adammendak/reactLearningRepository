@@ -1,6 +1,6 @@
 var path = require("path");
 module.exports = {
-    entry:["whatwg-fetch", "./egzamin/zadanie5.jsx"]
+    entry:["whatwg-fetch", "./router/router.jsx"]
     ,
     output: { filename: "out.js", path: path.resolve(__dirname, "js") },
     devServer: {
