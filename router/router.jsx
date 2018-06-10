@@ -47,9 +47,23 @@ class Navigation extends React.Component {
                 <li>
                     <Link to="/contact">Contact</Link>
                 </li>
+                <li>
+                    <Link to="/userInfo/1">go to user 1 </Link>
+                </li>
             </ul>
         </div>
     )}
+}
+
+class UserInfo extends React.Component {
+    render() {
+        return (
+            <h1>
+                Info about User with ID:
+                {this.props.match.params.userId}
+            </h1>
+        )
+    }
 }
 
 class App extends React.Component {
@@ -57,11 +71,15 @@ class App extends React.Component {
         return (
         <div>
             <HashRouter>
-                <Switch>
-                    <Route exact path='/' component={Main} />
-                    <Route path='/contact' component={Contact} />
-                    <Route component={NotFound} />
-                </Switch>
+                <div>
+                    <Navigation/>
+                    <Switch>
+                        <Route exact path='/' component={Main} />
+                        <Route path='/contact' component={Contact} />
+                        <Route path='/userInfo/:userId' component={UserInfo}/>
+                        <Route component={NotFound} />
+                    </Switch>
+                </div>
             </HashRouter>
         </div>
         )
