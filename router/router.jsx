@@ -8,6 +8,8 @@ import {
     NavLink,
 } from 'react-router-dom';
 
+const activeStyle = { backgroundColor:'green'};
+
 class Main extends React.Component {
     render() {
         return(
@@ -43,12 +45,12 @@ class Navigation extends React.Component {
             <h1>App</h1>
             <ul>
                 <li>
-                    <Link to="/">Home</Link> </li>
+                    <NavLink activeStyle={activeStyle} exact to="/">Home</NavLink> </li>
                 <li>
-                    <Link to="/contact">Contact</Link>
+                    <NavLink activeStyle={activeStyle} to="/contact">Contact</NavLink>
                 </li>
                 <li>
-                    <Link to="/userInfo/1">go to user 1 </Link>
+                    <NavLink activeStyle={activeStyle} to="/userInfo/1">go to user 1 </NavLink>
                 </li>
             </ul>
         </div>
@@ -67,6 +69,7 @@ class UserInfo extends React.Component {
 }
 
 class App extends React.Component {
+
     render() {
         return (
         <div>
