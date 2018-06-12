@@ -1,8 +1,8 @@
 var path = require("path");
 module.exports = {
-    entry:["whatwg-fetch", "./router/router.jsx"]
+    entry:["whatwg-fetch", "./application/index.jsx"]
     ,
-    output: { filename: "out.js", path: path.resolve(__dirname, "js") },
+    output: { filename: "out.js", path: path.resolve(__dirname, "dist") },
     devServer: {
         inline: true,
         contentBase: './',
