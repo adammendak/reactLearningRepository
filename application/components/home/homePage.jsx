@@ -7,7 +7,7 @@ class HomePage extends React.Component {
             <div>
                 <h1>Glowna Strona</h1>
                 <p>strona w React Redux i innych</p>
-                <Link to={about}> wiecej info </Link>
+                <Link to="/about"> wiecej info </Link>
             </div>
         )
     }
