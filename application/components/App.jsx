@@ -9,6 +9,7 @@ import {
 import HomePage from "./home/homePage.jsx";
 import AboutPage from "./about/aboutPage.jsx";
 import Navigation from "./Navigation.jsx";
+import {Button} from 'reactstrap';
 
 class App extends React.Component {
     render() {
@@ -23,6 +24,7 @@ class App extends React.Component {
                     </Switch>
                 </div>
             </BrowserRouter>
+            <Button color="danger">test bootstrap button</Button>
         </div>)
     }
 }
