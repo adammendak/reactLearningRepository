@@ -1,4 +1,7 @@
 import React from "react";
+import {NavLink} from 'react-router-dom';
+
+const activeStyle = { backgroundColor:'green'};
 
 class Navigation extends React.Component {
     render() {
@@ -15,3 +18,5 @@ class Navigation extends React.Component {
             </div>
         )}
 }
+
+export default Navigation;

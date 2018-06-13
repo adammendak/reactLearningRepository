@@ -1,6 +1,7 @@
 import React from 'react';
 import {
     HashRouter,
+    BrowserRouter,
     Route,
     Switch,
     NavLink
@@ -8,20 +9,12 @@ import {
 import HomePage from "./home/homePage.jsx";
 import AboutPage from "./about/aboutPage.jsx";
 import Navigation from "./Navigation.jsx";
-import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import 'bootstrap';
-
-
-const activeStyle = { backgroundColor:'green'};
-
-
 
 class App extends React.Component {
     render() {
         return (<div>
-            <p className={Jumbotron}>Header tu bedzie
-                sadfsdfas</p>
-            <HashRouter>
+            <p>Header tu bedzie</p>
+            <BrowserRouter>
                 <div>
                     <Navigation/>
                     <Switch>
@@ -29,7 +22,7 @@ class App extends React.Component {
                         <Route path='/about' component={AboutPage} />
                     </Switch>
                 </div>
-            </HashRouter>
+            </BrowserRouter>
         </div>)
     }
 }
