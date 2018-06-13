@@ -6,8 +6,6 @@ import {
     Nav,
     NavItem} from 'reactstrap';
 
-const activeStyle = { backgroundColor:'green'};
-
 class Navigation extends React.Component {
     render() {
         return (
